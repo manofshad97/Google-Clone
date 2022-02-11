@@ -36,7 +36,7 @@ const Chart = () => {
         date:
           filter === '1D'
             ? usertz.datetime(data.t[index], 'h:mm A')
-            : convertUnixTimestampToDate(data.t[index], includeYear),
+            : convertUnixTimestampToDate(data.t[index], includeYear)
       }
     })
   }
@@ -90,7 +90,7 @@ const Chart = () => {
             </li>
           ))}
         </ul>
-        <ResponsiveContainer>
+        <ResponsiveContainer width={window.screen.width < 500 ? '120%' : '100%'} height={window.screen.height < 500 ? '120%' : '100%'}>
           <AreaChart data={data}>
             <defs>
               <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
