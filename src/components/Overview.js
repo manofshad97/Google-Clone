@@ -35,7 +35,7 @@ const Overview = ({ symbol, price, change, changePercent, currency }) => {
             change > 0 ? 'text-lime-500' : 'text-red-500'
           }`}
         >
-          {change} <span>({changePercent})%</span>
+          {parseFloat(change).toFixed(2)} <span>({parseFloat(changePercent).toFixed(2)})%</span>
         </span>
       </div>
     </Card>
