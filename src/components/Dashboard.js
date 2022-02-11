@@ -63,7 +63,7 @@ const Dashboard = () => {
           currency={stockDetails.currency}
         />
       </div>
-      <div className="row-span-2 xl:row-span-3">
+      <div className="row-span-3 xl:row-span-3">
         <Details details={stockDetails} />
       </div>
     </div>

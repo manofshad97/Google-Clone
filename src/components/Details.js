@@ -28,10 +28,19 @@ const Details = ({ details }) => {
         {Object.keys(detailsList).map((item) => {
           return (
             <li key={item} className="flex-1 flex justify-between items-center">
-              <span>{detailsList[item]}</span>
+              <span>
+                {item === 'marketCapitalization' && window.screen.width < 500
+                  ? detailsList[item].substr(0, 10)
+                  : detailsList[item]}
+              </span>
               <span>
                 {item === 'marketCapitalization'
                   ? `${convertMilliontoBillion(details[item])}B`
+                  : details[item] === 'NASDAQ NMS - GLOBAL MARKET' &&
+                    window.screen.width < 500
+                  ? details[item].substr(0, 10)
+                  : details[item] === 'NEW YORK STOCK EXCHANGE, INC.'
+                  ? 'NYSE, Inc.'
                   : details[item]}
               </span>
             </li>

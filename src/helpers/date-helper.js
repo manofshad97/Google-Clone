@@ -2,9 +2,11 @@ export const convertDateToUnixTimestamp = (date) => {
     return Math.floor(date.getTime() / 1000)
 }
 
-export const convertUnixTimestampToDate = (unixTimestamp) => {
+export const convertUnixTimestampToDate = (unixTimestamp, includeYear) => {
     const milliseconds = unixTimestamp * 1000
-    return new Date(milliseconds).toLocaleDateString()
+    const options =   {month: 'numeric', day: 'numeric', year: '2-digit' }
+    if (!includeYear) delete options.year
+    return new Date(milliseconds).toLocaleDateString('en-US', options)
 }
 
 export const createDate = (date, days, weeks, months, years) => {
