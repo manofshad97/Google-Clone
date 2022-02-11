@@ -34,7 +34,7 @@ const Chart = () => {
       return {
         value: item.toFixed(2),
         date:
-          filter === '1D'
+          filter === '1M'
             ? usertz.datetime(data.t[index], 'h:mm A')
             : convertUnixTimestampToDate(data.t[index], includeYear)
       }
