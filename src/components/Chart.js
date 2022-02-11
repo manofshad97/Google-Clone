@@ -90,7 +90,7 @@ const Chart = () => {
             </li>
           ))}
         </ul>
-        <ResponsiveContainer width={window.screen.width < 500 ? '120%' : '100%'} height={window.screen.height < 500 ? '120%' : '100%'}>
+        <ResponsiveContainer >
           <AreaChart data={data}>
             <defs>
               <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
