@@ -21,7 +21,7 @@ import {
 import { chartConfig } from '../constants/config'
 
 const Chart = () => {
-  const [filter, setFilter] = useState('1W')
+  const [filter, setFilter] = useState('1M')
 
   const { darkMode } = useContext(ThemeContext)
 
@@ -34,7 +34,7 @@ const Chart = () => {
       return {
         value: item.toFixed(2),
         date:
-          filter === '1M'
+          filter === '1D'
             ? usertz.datetime(data.t[index], 'h:mm A')
             : convertUnixTimestampToDate(data.t[index], includeYear)
       }
