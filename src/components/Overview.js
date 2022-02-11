@@ -21,7 +21,7 @@ const Overview = ({ symbol, price, change, changePercent, currency }) => {
               : 'pl-0'
           } text-md xl:text-4xl 2xl:text-5xl flex items-center`}
         >
-          ${price}
+          ${(price + change).toFixed(2)}
           <span
             className={`${
               window.screen.width < 500 && symbol.length >= 3 ? 'hidden' : ''
