@@ -25,6 +25,7 @@ const Details = ({ details }) => {
           darkMode ? 'divide-gray-800' : null
         }`}
       >
+      {/*Map over detailsList and create a span for each. (category names) Map over details and create a span for each (actual values)*/}
         {Object.keys(detailsList).map((item) => {
           return (
             <li key={item} className="flex-1 flex justify-between items-center">
