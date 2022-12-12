@@ -25,7 +25,7 @@ const Details = ({ details }) => {
           darkMode ? 'divide-gray-800' : null
         }`}
       >
-      {/*Map over detailsList and create a span for each. (category names) Map over details and create a span for each (actual values)*/}
+      {/*Map over detailsList and create a span for each value in that list. (category names.) Using that same map, create another span but use the values from details instead of detailsList to get the actual numerical values from the API call*/}
         {Object.keys(detailsList).map((item) => {
           return (
             <li key={item} className="flex-1 flex justify-between items-center">
